@@ -34,7 +34,8 @@ let package = Package(
             path: "Sources/Down",
             exclude: ["Down.h"],
           resources: [
-            .copy("Resources/DownView.bundle"),
+            .copy("Resources/DownViewLight.bundle"),
+            .copy("Resources/DownViewDark.bundle"),
           ]
         ),
         .testTarget(
