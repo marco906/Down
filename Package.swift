@@ -5,9 +5,9 @@ import PackageDescription
 let package = Package(
     name: "Down",
     platforms: [
-        .macOS("10.11"),
-        .iOS("9.0"),
-        .tvOS("9.0")
+        .macOS("13.0"),
+        .iOS("17.0"),
+        .tvOS("17.0")
     ],
     products: [
         .library(
@@ -35,7 +35,6 @@ let package = Package(
             exclude: ["Down.h"],
           resources: [
             .copy("Resources/DownView.bundle"),
-            .copy("Resources/DownView (macOS).bundle"),
           ]
         ),
         .testTarget(

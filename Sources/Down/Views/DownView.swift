@@ -14,7 +14,7 @@
 
 #else
 
-import WebKit
+@preconcurrency import WebKit
 
 // MARK: - Public API
 
