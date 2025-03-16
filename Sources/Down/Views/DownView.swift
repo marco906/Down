@@ -18,7 +18,7 @@
 
 // MARK: - Public API
 
-public typealias DownViewClosure = () -> Void
+public typealias DownViewClosure = (WKWebView) -> Void
 
 open class DownView: WKWebView {
 
@@ -251,7 +251,7 @@ extension DownView: WKNavigationDelegate {
     }
 
     public func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        didLoadSuccessfully?()
+        didLoadSuccessfully?(webView)
     }
 
 }

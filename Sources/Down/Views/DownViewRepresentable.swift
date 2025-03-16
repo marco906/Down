@@ -39,6 +39,17 @@ struct DownViewWrapper: NSViewRepresentable {
     func updateNSView(_ nsView: DownView, context: Context) {
         // For a more dynamic implementation, update the DownView if the markdown changes.
     }
+    
+    func updateConstraints() {
+//        webView.evaluateJavaScript("document.body.scrollHeight") { [weak self] (result, error) in
+//            if let height = result as? CGFloat {
+//                DispatchQueue.main.async {
+//                    // Update the height constraint
+//                    self?.webViewHeightConstraint?.constant = height
+//                }
+//            }
+//        }
+    }
 }
 #else
 
