@@ -109,6 +109,18 @@ open class DownView: WKWebView {
 
         try loadHTMLView(markdownString)
     }
+    
+    #if os(macOS)
+    open override func scrollWheel(with event: NSEvent) {
+        // If there's a vertical scroll component, forward it.
+        if event.scrollingDeltaY != 0 {
+            self.nextResponder?.scrollWheel(with: event)
+        } else {
+            // Otherwise, handle normally (or do nothing).
+            super.scrollWheel(with: event)
+        }
+    }
+    #endif
 
     // MARK: - Private Properties
 
