@@ -21,6 +21,7 @@ struct DownViewWrapper: NSViewRepresentable {
             // Configure the layer for a transparent background.
             downView.wantsLayer = true
             downView.layer?.backgroundColor = NSColor.clear.cgColor
+            downView.setValue(false, forKey: "drawsBackground")
             return downView
         } catch {
             do {
@@ -28,7 +29,6 @@ struct DownViewWrapper: NSViewRepresentable {
                                             markdownString: "Error loading markdown.",
                                             openLinksInBrowser: true)
                 fallback.wantsLayer = true
-                fallback.layer?.backgroundColor = NSColor.clear.cgColor
                 return fallback
             } catch {
                 fatalError("Unable to create DownView")

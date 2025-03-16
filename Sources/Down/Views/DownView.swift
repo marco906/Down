@@ -62,7 +62,7 @@ open class DownView: WKWebView {
         }
 
         super.init(frame: frame, configuration: configuration ?? WKWebViewConfiguration())
-
+        
         #if os(macOS)
         setupMacEnvironment()
         #endif

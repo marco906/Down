@@ -46,8 +46,7 @@ body {
     font-size: 1.0em;
     line-height: 1.6;
     word-wrap: break-word;
-    padding: 2rem;
-    background-color: #000;
+    background-color: transparent;
 }
 a {
     background-color: transparent;
