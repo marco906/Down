@@ -105,5 +105,5 @@ struct DownViewWrapper: NSViewRepresentable {
         This setup lets you seamlessly convert Markdown to HTML with Ink and display it in your SwiftUI app on both iOS and macOS.
         """)
     .frame(width: 700, height: 800)
-    .background(.black)
+    //.background(.clear)
 }
